@@ -21,11 +21,13 @@ Code examples to get started are provided below (feel free to suggest further co
 ### Example #1: Get the metadata of a Dataset:
 
  - Identify the appropriate web resource method to use: package_metadata_show
- - Identify the dataset you want and retrieve it's ID, for instance: age-specific-death-rates-annual
- - Create the URL call: `https://catalogue.data.govt.nz/api/3/action/package_metadata_show?id=`.
-Make a web request to the above URL and you will receive a response. After parsing the JSON response into an object, check if the request was successful by ensuring that the response-json-object.success value evaluates to true before proceeding.
+ - Identify the dataset you want and retrieve it's ID, for instance: new-zealand-public-sector-websites
+ - Create POST HTTP call to: `https://catalogue.data.govt.nz/api/3/action/package_metadata_show?id=new-zealand-public-sector-websites`.
+ - You will receive a JSON response containing the metadata for this dataset. After parsing the JSON response into an object, check if the request was successful by ensuring that the response-json-object.success value evaluates to true before proceeding.
+
 The following example shows how you can use Python to retrieve dataset information from the site:
 
+```
 #!/usr/bin/env python
 import urllib2
 import urllib
@@ -33,11 +35,11 @@ import json
 import pprint
 
 # Use the json module to dump a dictionary to a string for posting.
-data_string = urllib.quote(json.dumps({'id': 'data-explorer'}))
+data_string = urllib.quote(json.dumps({'id': 'new-zealand-public-sector-websites'}))
 
 # Make the HTTP request.
 response = urllib2.urlopen
-('https://catalogue.data.govt.nz/api/3/action/package_metadata_show?id=',data_string)
+('https://catalogue.data.govt.nz/api/3/action/package_metadata_show?id=new-zealand-public-sector-websites',data_string)
 assert response.code == 200
 
 # Use the json module to load CKAN's response into a dictionary.
@@ -47,6 +49,7 @@ response_dict = json.loads(response.read())
 assert response_dict['success'] is True
 result = response_dict['result']
 pprint.pprint(result)
+```
     
 The following example shows how you can use Javascript and jQuery to retrieve dataset information from the site:
 
