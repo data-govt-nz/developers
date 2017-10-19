@@ -4,8 +4,8 @@
 Using the [`ckanapi-exporter`](https://github.com/ckan/ckanapi-exporter) tool you can extract all dataset metadata into a single CSV file.
 
 ## Requirements
- - [Python 2.7](https://wiki.python.org/moin/BeginnersGuide/Download) or higher
- - [CKANAPI-Exporter](https://github.com/ckan/ckanapi-exporter) (`pip install ckanapi-exporter`)
+ - [Python 2.7+](https://wiki.python.org/moin/BeginnersGuide/Download)
+ - [CKANAPI-Exporter 0.1.0+](https://github.com/ckan/ckanapi-exporter) (`pip install ckanapi-exporter`)
  - A command line
 
 ## Steps
