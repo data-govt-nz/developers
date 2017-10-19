@@ -37,10 +37,12 @@ Using the [`ckanapi-exporter`](https://github.com/ckan/ckanapi-exporter) tool yo
       "max_length": 10
   },
   "DatasetCreated": {
-      "pattern": "^issued$"
+      "pattern": "^issued$",
+      "max_length": 10
   },
   "DatasetLastUpdated": {
-      "pattern": "^modified$"
+      "pattern": "^modified$",
+      "max_length": 10
   },
   "FrequencyOfUpdate": {
       "pattern": "^frequency_of_update$"
@@ -80,7 +82,7 @@ Using the [`ckanapi-exporter`](https://github.com/ckan/ckanapi-exporter) tool yo
   "DatasetContactPhone": {
       "pattern": "^maintainer_phone$"
   },
-  "PerminentIdentifier":{
+  "PermanentIdentifier":{
       "pattern": "^id$"
   },
   "SourceIdentifier": {
