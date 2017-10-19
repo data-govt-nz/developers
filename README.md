@@ -3,6 +3,13 @@ Developer documentation and code examples for use with data.govt.nz
 
 Here are some resources that you can use to develop applications with the data on data.govt.nz. If you are using the APIs listed here, please review the data.govt.nz [Terms of Use](https://www.data.govt.nz/terms-of-use/).
 
+## How to
+There are a collection of guidance for devleopers on how to carry certain useful things using the CKAN API.
+
+See [How to](https://github.com/data-govt-nz/developers/tree/master/how-to).
+
+Feel free to add new tutorials and snippets via pull requests.
+
 ## CKAN APIs
 The prefix for web resource endpoints is `https://catalogue.data.govt.nz/api/action` and they return responses in JSON format. You can retrieve dataset and resource metadata through these functions:
 
